@@ -64,6 +64,7 @@ namespace Microsoft.eShopWeb.Web
             ConfigureServices(services);
         }
 
+
         public void ConfigureProductionServices(IServiceCollection services)
         {
             // use real database
@@ -78,7 +79,9 @@ namespace Microsoft.eShopWeb.Web
 
             ConfigureServices(services);
         }
-
+    public void ConfigureAzureServices (IServiceCollection services){
+        ConfigureProductionServices(services);
+    }
         public void ConfigureTestingServices(IServiceCollection services)
         {
             ConfigureInMemoryDatabases(services);
