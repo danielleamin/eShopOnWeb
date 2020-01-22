@@ -1,6 +1,7 @@
 ﻿.esh-app-footer {
   background-color: #000000;
-  border-top: 1px solid #EEEEEE;
+  border-top: 1px solid #000000;
+  color: #ffffff;
   margin-top: 2.5rem;
   padding-bottom: 2.5rem;
   padding-top: 2.5rem;
