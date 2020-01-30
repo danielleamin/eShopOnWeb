@@ -7,7 +7,7 @@ using Microsoft.eShopWeb.Web.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Web.Extensions
+namespace Microsoft.eShopWeb.Web.Services
 {
     public static class CatalogExtensions
     {
@@ -31,4 +31,3 @@ namespace Web.Extensions
         
     }
 }
-© 2020 GitHub, Inc.
