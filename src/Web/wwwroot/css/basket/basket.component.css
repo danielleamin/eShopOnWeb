@@ -9,7 +9,7 @@
   .esh-basket-title {
     text-transform: uppercase; }
   .esh-basket-items--border {
-    border-bottom: 1px solid #EEEEEE;
+    border-bottom: 1px solid #000000;
     padding: .5rem 0; }
     .esh-basket-items--border:last-of-type {
       border-color: transparent; }
@@ -24,14 +24,14 @@
         .esh-basket-item--middle {
           line-height: 1rem; } }
     .esh-basket-item--mark {
-      color: #00A69C; }
+      color: #000000; }
   .esh-basket-image {
     height: 8rem; }
   .esh-basket-input {
     line-height: 1rem;
     width: 100%; }
   .esh-basket-checkout {
-    background-color: #83D01B;
+    background-color: #000000;
     border: 0;
     border-radius: 0;
     color: #FFFFFF;
@@ -44,5 +44,5 @@
     text-transform: uppercase;
     transition: all 0.35s; }
     .esh-basket-checkout:hover {
-      background-color: #4a760f;
+      background-color: #000000;
       transition: all 0.35s; }

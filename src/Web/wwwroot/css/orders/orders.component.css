@@ -23,7 +23,7 @@
     line-height: 2rem;
     position: relative; }
     .esh-orders-items:nth-of-type(2n + 1):before {
-      background-color: #EEEEFF;
+      background-color: #ffffff;
       content: '';
       height: 100%;
       left: 0;
@@ -41,7 +41,7 @@
     opacity: 1;
     pointer-events: all; }
   .esh-orders-link {
-    color: #83D01B;
+    color: #000000;
     text-decoration: none;
     transition: color 0.35s; }
     .esh-orders-link:hover {
