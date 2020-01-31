@@ -1,33 +1,22 @@
-﻿using System;
+﻿using Microsoft.eShopWeb.Web;
+using Microsoft.eShopWeb.Web.Extensions;
+using Xunit;
 
-namespace Microsoft.eShopWeb.Web.Extensions
+namespace Microsoft.eShopWeb.UnitTests.Web.Extensions.CacheHelpersTests
 {
-    public static class CacheHelpers
+    public class GenerateCatalogItemCacheKey_Should
     {
-        public static readonly TimeSpan DefaultCacheDuration = TimeSpan.FromSeconds(30);
-        private static readonly string _itemsKeyTemplate = "items-{0}-{1}-{2}-{3}-{4}";
-
-        public static string GenerateCatalogItemCacheKey(int pageIndex, int itemsPage,
-            string searchText, int? brandId, int? typeId)
+        [Fact]
+        public void ReturnCatalogItemCacheKey()
         {
-            return string.Format(
-                _itemsKeyTemplate, pageIndex, itemsPage, brandId, typeId,
-                searchText ?? string.Empty // TODO: Handle invalid special chars in cache keys?
-            );
-        }
+            var pageIndex = 0;
+            string searchText = null;
+            int? brandId = null;
+            int? typeId = null;
 
-        public static string GenerateCatalogItemIdKey(int id) {
-            return $"catalog_item_{id}";
-        }
+            var result = CacheHelpers.GenerateCatalogItemCacheKey(pageIndex, Constants.ITEMS_PER_PAGE, searchText, brandId, typeId);
 
-        public static string GenerateBrandsCacheKey()
-        {
-            return "brands";
-        }
-
-        public static string GenerateTypesCacheKey()
-        {
-            return "types";
+            Assert.Equal("items-0-10--", result);
         }
     }
 }
