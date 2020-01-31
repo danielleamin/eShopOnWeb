@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿  
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 
 namespace Microsoft.eShopWeb.Web.ViewModels
@@ -12,6 +13,7 @@ namespace Microsoft.eShopWeb.Web.ViewModels
         public int? BrandFilterApplied { get; set; }
         public int? TypesFilterApplied { get; set; }
         public ResultView ResultView { get; set; } = ResultView.Grid;
+        public string SearchText {get; set;}
         public PaginationInfoViewModel PaginationInfo { get; set; }
     }
 }
