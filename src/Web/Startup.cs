@@ -187,7 +187,8 @@ namespace Microsoft.eShopWeb.Web {
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
+
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IAppLogger<Startup> logger) {
             app.UseBenchmarking();
             app.UseHealthChecks("/health",
                 new HealthCheckOptions {
@@ -205,7 +206,9 @@ namespace Microsoft.eShopWeb.Web {
                     }
                 });
             if (env.IsDevelopment()) {
-                // app.UseDeveloperExceptionPage();
+                
+                logger.LogInformation("In Development environment");
+                app.UseDeveloperExceptionPage();
                 app.UseShowAllServicesMiddleware();
                 app.UseDatabaseErrorPage();
             } else {
