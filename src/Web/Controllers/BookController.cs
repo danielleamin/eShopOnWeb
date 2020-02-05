@@ -21,3 +21,5 @@ namespace Localization.Controllers
 
             return View();
         }
+    }
+ }

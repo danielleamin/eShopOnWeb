@@ -1,5 +1,4 @@
-{
-    public class TestController : Controller
+ public class TestController : Controller
     {
         private readonly IStringLocalizer _localizer;
         private readonly IStringLocalizer _localizer2;
@@ -16,3 +15,7 @@
         {
             ViewData["Message"] = _localizer["Your application description page."] 
                 + " loc 2: " + _localizer2["Your application description page."];
+
+        }
+    }
+}
