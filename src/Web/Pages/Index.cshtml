@@ -28,8 +28,15 @@
 
  <!--Label Stores DA/CF -->
             <label class="esh-catalog-label" data-title="stores">
-                <select asp-for="@Model.CatalogModel.LojasFilterApplied"
+                <select asp-for="@Model.CatalogModel.StoresFilterApplied"
                 asp-items="@Model.CatalogModel.Lojas"
+                class="esh-catalog-filter"></select>
+            </label> 
+
+            <!--Label Stock DA/CF -->
+            <label class="esh-catalog-label" data-title="stock">
+                <select asp-for="@Model.CatalogModel.StockFilterApplied"
+                asp-items="@Model.CatalogModel.Stock"
                 class="esh-catalog-filter"></select>
             </label> 
 
