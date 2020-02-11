@@ -25,6 +25,14 @@
                 class="esh-catalog-filter">
                 </select>
             </label>
+
+ <!--Label Stores DA/CF -->
+            <label class="esh-catalog-label" data-title="stores">
+                <select asp-for="@Model.CatalogModel.LojasFilterApplied"
+                asp-items="@Model.CatalogModel.Lojas"
+                class="esh-catalog-filter"></select>
+            </label> 
+
             <input type="text" asp-for="@Model.CatalogModel.SearchText"
                 value="@Model.CatalogModel.SearchText" />
             <input class="esh-catalog-send" type="image" src="images/arrow-right.svg" />
