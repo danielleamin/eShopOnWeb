@@ -29,13 +29,6 @@ namespace Microsoft.eShopWeb.Web.Services
         private readonly IAsyncRepository<CatalogItem> _itemRepository;
         private readonly IAsyncRepository<CatalogBrand> _brandRepository;
         private readonly IAsyncRepository<CatalogType> _typeRepository;
-        //store
-        private readonly IAsyncRepository<CatalogStore> _storeRepository;
-
-        //stock
-
-        private readonly IAsyncRepository<CatalogStock> _stockRepository;
-        
         private readonly IUriComposer _uriComposer;
         private readonly ICurrencyService _currencyService;
 

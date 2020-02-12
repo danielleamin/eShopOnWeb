@@ -12,7 +12,7 @@ namespace Web.Extensions.Middleware
             // app.UseMiddleware<MeasureRequestExecutionTime>();
             // app.UseMiddleware<MeasureRequestExecutionTime>();
             // app.UseMiddleware<MeasureRequestExecutionTime>();
-
+            
         }
     }
-} 
+}

@@ -12,8 +12,6 @@ namespace Microsoft.eShopWeb.ApplicationCore.Entities
         public int CatalogTypeId { get; set; }
         public int CatalogBrandId { get; set; }
 
-    
-
         [DefaultValue(true)]
         public bool ShowPrice { get; set; } = true;
         
@@ -21,7 +19,6 @@ namespace Microsoft.eShopWeb.ApplicationCore.Entities
         #region "Navigation properties"
         public CatalogType CatalogType { get; set; }
         public CatalogBrand CatalogBrand { get; set; }
-        
         #endregion
 
     }
