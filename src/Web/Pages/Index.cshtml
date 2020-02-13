@@ -36,7 +36,23 @@
 
             </label>
 
+            <label class="esh-catalog-label" data-title="stores">
+
+                <select asp-for="@Model.CatalogModel.StoresFilterApplied" asp-items="@Model.CatalogModel.Stores" class="esh-catalog-filter"></select>
+
+            </label>
+
+
+
+
+         <input type="text" asp-for="@Model.CatalogModel.SearchText"
+                value="@Model.CatalogModel.SearchText" />
+
             <input class="esh-catalog-send" type="image" src="images/arrow-right.svg" />
+        
+
+           
+
 
         </form>
 
