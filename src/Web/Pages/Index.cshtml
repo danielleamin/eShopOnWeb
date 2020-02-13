@@ -7,6 +7,13 @@
     @model IndexModel
 
 }
+<!-- ironpdf-->
+
+@{
+    var linkpdf = $"/reports/pdf/catalog{HttpContext.Request.QueryString.ToString()}";
+}
+
+<!---->
 
 <section class="esh-catalog-hero">
 
