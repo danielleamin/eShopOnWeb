@@ -29,6 +29,19 @@ namespace Microsoft.eShopWeb.Infrastructure.Data {
                     await catalogContext.SaveChangesAsync();
                 }
 
+                if (!catalogContext.CatalogStores.Any()) {
+
+                    catalogContext.CatalogStores.AddRange(
+
+                        GetPreconfiguredCatalogStores());
+
+ 
+
+                    await catalogContext.SaveChangesAsync();
+
+                }
+
+
                 if (!catalogContext.CatalogItems.Any()) {
                     catalogContext.CatalogItems.AddRange(
                         GetPreconfiguredItems());
@@ -63,6 +76,17 @@ namespace Microsoft.eShopWeb.Infrastructure.Data {
                     new CatalogType() { Type = "Sheet" },
                     new CatalogType() { Type = "USB Memory Stick" }
             };
+        }
+
+
+// Inserir CatalogStore
+
+        static IEnumerable<CatalogStore> GetPreconfiguredCatalogStores() {
+             return new List<CatalogStore>() {
+                new CatalogStore() { Store = "Viseu" },
+                new CatalogStore() { Store = "Aveiro" },
+            };
+
         }
 
         static IEnumerable<CatalogItem> GetPreconfiguredItems() {

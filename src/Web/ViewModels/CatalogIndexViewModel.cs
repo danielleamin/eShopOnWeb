@@ -9,8 +9,11 @@ namespace Microsoft.eShopWeb.Web.ViewModels
         public IEnumerable<SelectListItem> Brands { get; set; }
         public IEnumerable<SelectListItem> Types { get; set; }
         public IEnumerable<SelectListItem> ResultViews { get; set; }
+        public IEnumerable<SelectListItem> Stores { get; set; }
+    
         public int? BrandFilterApplied { get; set; }
         public int? TypesFilterApplied { get; set; }
+        public int? StoresFilterApplied { get; set; }
         public ResultView ResultView { get; set; } = ResultView.Grid;
         public string SearchText {get; set;}
         public PaginationInfoViewModel PaginationInfo { get; set; }
