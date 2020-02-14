@@ -6,6 +6,7 @@ namespace Microsoft.eShopWeb.ApplicationCore.Entities
 {
     public class CatalogItem : BaseEntity, IAggregateRoot
     {
+        public int ItemId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }

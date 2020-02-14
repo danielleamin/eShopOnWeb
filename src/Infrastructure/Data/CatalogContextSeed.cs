@@ -22,6 +22,7 @@ namespace Microsoft.eShopWeb.Infrastructure.Data {
                     await catalogContext.SaveChangesAsync();
                 }
 
+
                 if (!catalogContext.CatalogTypes.Any()) {
                     catalogContext.CatalogTypes.AddRange(
                         GetPreconfiguredCatalogTypes());
@@ -29,13 +30,13 @@ namespace Microsoft.eShopWeb.Infrastructure.Data {
                     await catalogContext.SaveChangesAsync();
                 }
 
+
                 if (!catalogContext.CatalogStores.Any()) {
 
                     catalogContext.CatalogStores.AddRange(
 
                         GetPreconfiguredCatalogStores());
 
- 
 
                     await catalogContext.SaveChangesAsync();
 
@@ -48,6 +49,17 @@ namespace Microsoft.eShopWeb.Infrastructure.Data {
 
                     await catalogContext.SaveChangesAsync();
                 }
+
+//catalogStock
+                if (!catalogContext.CatalogStock.Any())
+                {
+                    catalogContext.CatalogStock.AddRange(
+                        GetPreconfiguredCatalogStock());
+
+                    await catalogContext.SaveChangesAsync();
+                }
+
+
             } catch (Exception ex) {
                 if (retryForAvailability < 10) {
                     retryForAvailability++;
@@ -79,15 +91,6 @@ namespace Microsoft.eShopWeb.Infrastructure.Data {
         }
 
 
-// Inserir CatalogStore
-
-        static IEnumerable<CatalogStore> GetPreconfiguredCatalogStores() {
-             return new List<CatalogStore>() {
-                new CatalogStore() { Store = "Viseu" },
-                new CatalogStore() { Store = "Aveiro" },
-            };
-
-        }
 
         static IEnumerable<CatalogItem> GetPreconfiguredItems() {
             return new List<CatalogItem>() {
@@ -104,6 +107,29 @@ namespace Microsoft.eShopWeb.Infrastructure.Data {
                     new CatalogItem() { CatalogTypeId = 3, CatalogBrandId = 2, Description = "Cup<T> Sheet", Name = "Cup<T> Sheet", Price = 8.5M, PictureUri = "http://catalogbaseurltobereplaced/images/products/11.png" },
                     new CatalogItem() { CatalogTypeId = 2, CatalogBrandId = 5, Description = "Prism White TShirt", Name = "Prism White TShirt", Price = 12, PictureUri = "http://catalogbaseurltobereplaced/images/products/12.png" }
             };
+        }
+
+
+        // Inserir CatalogStore
+
+        static IEnumerable<CatalogStore> GetPreconfiguredCatalogStores() {
+
+             return new List<CatalogStore>() {
+
+                new CatalogStore() { Store = "Viseu" },
+                new CatalogStore() { Store = "Aveiro" },
+            };
+
+        }
+// Inserir CatalogStock
+
+static IEnumerable<CatalogStock> GetPreconfiguredCatalogStock() {
+
+             return new List<CatalogStock>() {
+
+                new CatalogStock() { ItemId = 1, StoreId = 1, Stock = 10 }
+            };
+
         }
     }
 }

@@ -10,6 +10,8 @@ namespace Microsoft.eShopWeb.ApplicationCore.Entities
         public int BrandId { get; set; }
 
         public int StoreId {get; set;}
+
+        public int ItemId { get; set;}
         
 
     }
