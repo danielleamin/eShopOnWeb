@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.eShopWeb.Web.Services;
 using Microsoft.eShopWeb.Web.ViewModels;
 using Microsoft.Extensions.Caching.Memory;
-
 using System.Threading.Tasks;
 
 namespace Microsoft.eShopWeb.Web.Pages.Pdf
