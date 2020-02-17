@@ -23,6 +23,11 @@
                 <select asp-for="@Model.CatalogModel.BrandFilterApplied"
                 asp-items="@Model.CatalogModel.Brands" class="esh-catalog-filter"></select>
             </label>
+            <label class="esh-catalog-label" data-title="stores">
+                <select asp-for="@Model.CatalogModel.TypesFilterApplied"
+                asp-items="@Model.CatalogModel.Stores"
+                class="esh-catalog-filter"></select>
+            </label>
             <label class="esh-catalog-label" data-title="type">
                 <select asp-for="@Model.CatalogModel.TypesFilterApplied"
                 asp-items="@Model.CatalogModel.Types"
