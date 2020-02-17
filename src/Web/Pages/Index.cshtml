@@ -1,4 +1,8 @@
 ﻿@page
+@using Microsoft.Extensions.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IStringLocalizer<IndexModel> TextLocalizer
+@inject IHtmlLocalizer<IndexModel> HtmlLocalizer
 
 @{
     ViewData["Title"] = "Catalog";
@@ -7,6 +11,7 @@
     var href = $"/reports/pdf/catalog{HttpContext.Request.QueryString.ToString()}";
 
 }
+
 
 <section class="esh-catalog-hero">
     <div class="container">
