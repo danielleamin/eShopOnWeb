@@ -12,11 +12,11 @@
         <span class="item--price-unit">@Model.PriceUnit.ToString()</span>
     </div>
     }
-    @foreach (var item in Model.Stocks)
+    @* @foreach (var item in Model.Stocks)
     {
         <p>@item.StoreName</p>
         <p>@item.Stock</p>
-    }
+    } *@
     <input type="hidden" asp-for="@Model.Id" name="id" />
     <input type="hidden" asp-for="@Model.Name" name="name" />
     <input type="hidden" asp-for="@Model.PictureUri" name="pictureUri" />

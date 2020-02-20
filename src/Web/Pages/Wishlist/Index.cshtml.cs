@@ -46,7 +46,7 @@ namespace Microsoft.eShopWeb.Web.Pages.Wishlist
             await SetWishlistModelAsync();
 
             await _wishlistService.AddItemToWishlist(WishlistModel.Id,
-                                                     productDetails.Id);
+                                                     productDetails.Id, productDetails.Price);
 
             await SetWishlistModelAsync();
 

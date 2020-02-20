@@ -73,10 +73,11 @@ namespace Microsoft.eShopWeb.Web.Services
                         ? _currencyService.Convert(catalogItem.Price, DEFAULT_PRICE_UNIT, USER_PRICE_UNIT, cancellationToken)
                         : Task.FromResult(catalogItem.Price)),
                     ShowPrice = catalogItem.ShowPrice,
-                    PriceUnit  = USER_PRICE_UNIT,
-                    Stocks = catalogItem.Stocks.Select(cis => new StockInStore {
-                        StoreName = cis.Store.Name,
-                        Stock = cis.Stock}).ToList()
+                    PriceUnit  = USER_PRICE_UNIT
+                    // ,
+                    // Stocks = catalogItem.Stocks.Select(cis => new StockInStore {
+                    //     StoreName = cis.Store.Name,
+                    //     Stock = cis.Stock}).ToList()
                 };
         }
 

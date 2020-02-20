@@ -21,10 +21,6 @@ namespace Microsoft.eShopWeb.Infrastructure.Data.Config
             builder.HasOne(ci => ci.Store)
                 .WithMany()
                 .HasForeignKey(ci => ci.StoreId);
-
-            builder.HasOne(ci => ci.Item)
-                .WithMany()
-                .HasForeignKey(ci => ci.CatalogTypeId);
         }
     }
 }

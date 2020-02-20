@@ -5,7 +5,7 @@ namespace Microsoft.eShopWeb.Web.ViewModels
 {
     public class StockInStore {
         public string StoreName {get; set;}
-         public int Stock {get; set;}
+        public int Stock {get; set;}
     }
 
     public class CatalogItemViewModel

@@ -9,6 +9,5 @@ namespace Microsoft.eShopWeb.ApplicationCore.Interfaces
         Task TransferWishlistAsync(string anonymousId, string userName);
         Task AddItemToWishlist(int wishlistId, int catalogItemId, decimal price, int quantity = 1);
         Task DeleteWishlistAsync(int wishlistId);
-        Task AddItemToWishlist(int id1, int id2);
     }
 }
