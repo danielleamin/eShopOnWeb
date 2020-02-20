@@ -116,8 +116,8 @@ namespace Microsoft.eShopWeb.Infrastructure.Data {
 
              return new List<CatalogStore>() {
 
-                new CatalogStore() { Store = "Viseu" },
-                new CatalogStore() { Store = "Aveiro" },
+                new CatalogStore() { Name = "Viseu" },
+                new CatalogStore() { Name = "Aveiro" },
             };
 
         }
