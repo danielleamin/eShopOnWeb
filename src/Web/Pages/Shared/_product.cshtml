@@ -25,7 +25,7 @@
 
  <form asp-page="/WishList/Index" method="post">
     @if(User.Identity.IsAuthenticated) {
-        <input type="image" src="~/images/document/wishList.jpg" style="width:34px;position:relative;top:-34px;right:-142px;"/>
+        <input type="image" src="~/images/document/wishList.png" style="width:34px;position:relative;top:-34px;right:-142px;"/>
     }
 
     <input type="hidden" asp-for="@Model.Id" name="id" />
