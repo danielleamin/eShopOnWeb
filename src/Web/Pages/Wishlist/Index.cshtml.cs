@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 
-namespace Microsoft.eShopWeb.Web.Pages.WishList
+namespace Microsoft.eShopWeb.Web.Pages.Wishlist
 {
     public class IndexModel : PageModel
     {

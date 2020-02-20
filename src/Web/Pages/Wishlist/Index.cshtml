@@ -1,7 +1,7 @@
 @page "{handler?}"
 @model IndexModel
 @{
-    ViewData["Title"] = "WishList";
+    ViewData["Title"] = "Wishlist";
 }
 <section class="esh-catalog-hero">
     <div class="container">
@@ -11,7 +11,7 @@
 
 <div class="container">
 
-    @if (Model.WishListModel.Items.Any())
+    @if (Model.WishlistModel.Items.Any())
     {
         <form method="post">
             <article class="esh-basket-titles row">
@@ -20,9 +20,9 @@
                 <section class="esh-basket-title col-xs-3 hidden-lg-down"></section>
             </article>
             <div class="esh-catalog-items row">
-                @for (int i = 0; i < Model.WishListModel.Items.Count; i++)
+                @for (int i = 0; i < Model.WishlistModel.Items.Count; i++)
                 {
-                    var item = Model.WishListModel.Items[i];
+                    var item = Model.WishlistModel.Items[i];
                     <article class="esh-basket-items row">
                         <div>
                             <section class="esh-basket-item esh-basket-item--middle col-lg-3 hidden-lg-down">
@@ -47,7 +47,7 @@
     else
     {
         <h3 class="esh-catalog-items row">
-            WishList is empty.
+            Wishlist is empty.
         </h3>
 
         <section class="esh-basket-item">
